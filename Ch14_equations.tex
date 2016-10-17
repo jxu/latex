@@ -5,6 +5,7 @@
 
 \counterwithin{equation}{section}  % Reset equation counter every section
 \counterwithout{equation}{chapter} 
+\setlength\parindent{0pt}  % No indent
 
 \begin{document}
 \setcounter{chapter}{14}
@@ -100,5 +101,35 @@ Treated similarly to two variable functions. If $w = f(x, y, z)$, then $f_x = \p
 \begin{equation}
 	f_{xy}(a, b) = f_{yx}(a, b)
 \end{equation}
+
+\newpage
+
+\section{Tangent Planes and Linear Approximations}
+\subsection*{Tangent Planes}
+Suppose a surface $S$ had equation $z=f(x,y)$ with continuous first derivatives.
+Let $C_1$ and $C_2$ be the curves obtained by intersecting the vertical planes $y=y_0$ and $x=x_0$ with the surface $S$. 
+Let $T_1$ and $T_2$ be the tangent lines to the curves $C_1$ and $C_2$ at $P$. 
+
+\paragraph{Tangent Plane} The plane to $S$ at $P$ that contains tangent lines $T_1$ and $T_2$. \\ \\
+At $P(x_0,y_0,z_0)$
+\begin{equation}
+	z - z_0 = f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)
+\end{equation}
+
+\subsection*{Linear Approximations}
+At point $(a, b, f(a, b))$, the \textbf{linearlization} is
+\begin{equation}
+	z = L(x, y) = f(a, b) + f_x(a,b)(x-a) + f_y(a,b)(y-b)
+\end{equation}
+The approximation of $f(x, y)$ is called the \textbf{linear approximation}.
+
+\subsection*{Differentiable Functions}
+\paragraph{Theorem for differentiability} If the partial derivatives $f_x$ and $f_y$ exist near $(a, b)$ and are continuous at $(a, b)$, then $f$ is differentiable at $(a, b)$. \\ 
+
+Even if \textit{directional derivatives} exist at a point in every direction, the function still may not be differentiable at that point. 
+But if a function is differentiable at a point, then \textit{all} directional derivatives will exist at that point. 
+
+\subsection*{Three or More Variables}
+Defined similarly.
 
 \end{document}
