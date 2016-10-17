@@ -3,12 +3,13 @@
 \documentclass{report}  % For chapter number
 \usepackage{amsmath, chngcntr}
 
-\counterwithin*{equation}{section}  % Reset equation counter every section
+\counterwithin{equation}{section}  % Reset equation counter every section
 \counterwithout{equation}{chapter} 
 
 \begin{document}
 \setcounter{chapter}{14}
 \section{Functions of Several Variables}
+\subsection*{New Definitions}
 \paragraph{Level Curves} 
  $f(x,y)=k$ where $k$ is a constant.
  
@@ -16,7 +17,7 @@
 $f(x,y,z)=k$
 
 \section{Limits and Continuity}
-\subsection*{Definition of limits} 
+\subsection*{Definition of Limits} 
 Let $f$ be a function of two variables whose domain $D$ includes points arbitrarily close to $(a, b)$. 
 
 \begin{equation}
@@ -56,5 +57,48 @@ We say $f$ is \textbf{continuous on} $D$ if $f$ is continuous at every point $(a
 \begin{equation}
 	f_x (a, b) = g'(a) \quad \text{where} \quad g{x} = f(x, b)
 \end{equation}	
+
+\subsection*{Definition of Derivatives}
+The partial derivatives are defined by
+\begin{equation}
+\begin{aligned}
+	f_x(x,y) = \lim_{h \to 0} \frac{f(x+h,y)-f(x,y)}{h} \\
+	f_y(x,y) = \lim_{h \to 0} \frac{f(x,y+h)-f(x,y)}{h}
+\end{aligned}
+\end{equation}
+
+\subsection*{Notation}
+If $z = f(x, y)$
+\begin{equation*}  % Here we go
+\begin{aligned}
+	f_x(x,y) = f_x = \frac{\partial f}{\partial x} = 
+	\frac{\partial }{\partial x} f(x, y) = \frac{\partial z}{\partial x} = 
+	f_1 = D_1 f = D_x f	\\ \\
+	f_y(x,y) = f_y = \frac{\partial f}{\partial y} = 
+	\frac{\partial }{\partial y} f(x, y) = \frac{\partial z}{\partial y} = 
+	f_2 = D_2 f = D_y f	
+\end{aligned}
+\end{equation*}
+
+\subsection*{Finding Partial Derivatives}
+To find $f_x$, treat $y$ as a constant and differentiate $f(x, y)$ with respect to $x$. \\
+To find $f_y$, treat $x$ as a constant and differentiate $f(x, y)$ with respect to $y$.
+
+\subsection*{Interpretations}
+The partial derivatives $f_x(a, b)$ and $f_y(a, b)$ can be interpreted geometrically as the slopes of the tangent lines at $P(a, b, c)$ to the traces $C_1$ and $C_2$ of $S$ in the planes $y=b$ and $x=a$. 
+
+Partial derivatives can also be interpreted as \textit{rates of change}. If $z = f(x,y)$, then $\partial z / \partial x$ represents the rate of change of $z$ with respect to $x$ when $y$ is fixed. 
+Similarly, $\partial z / \partial y$ represents the rate of change of $z$ with respect to $y$ when $x$ is fixed.
+
+\subsection*{More Than Two Variables}
+Treated similarly to two variable functions. If $w = f(x, y, z)$, then $f_x = \partial w / \partial x$ with respect to $x$ when $y$ and $z$ are held constant. Similar notation follows. 
+
+\subsection*{Higher Derivatives}
+\paragraph{Second Partial Derivatives} The partial derivatives of the partial derivatives, $(f_x)_x, (f_x)_y, (f_y)_x, (f_y)_y$. The notation is similar to the notation of higher derivatives of functions of one variable.
+
+\paragraph{Clairaut's Theorem} Suppose $f$ is defined on a disk $D$ that contains the point $(a, b)$. If the functions $f_{xy}$ and $f_{yx}$ are both continuous on $D$, then 
+\begin{equation}
+	f_{xy}(a, b) = f_{yx}(a, b)
+\end{equation}
 
 \end{document}
