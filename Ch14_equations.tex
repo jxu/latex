@@ -1,17 +1,21 @@
 % Basic formatting
 
-\documentclass{article}
-\usepackage{amsmath, amsthm}  % amsthm not used
+\documentclass{report}  % For chapter number
+\usepackage{amsmath, chngcntr}
+
+\counterwithin*{equation}{section}  % Reset equation counter every section
+\counterwithout{equation}{chapter} 
 
 \begin{document}
-\section*{14.1 Functions of Several Variables}
+\setcounter{chapter}{14}
+\section{Functions of Several Variables}
 \paragraph{Level Curves} 
  $f(x,y)=k$ where $k$ is a constant.
  
 \paragraph{Level Surfaces}
 $f(x,y,z)=k$
 
-\section*{14.2 Limits and Continuity}
+\section{Limits and Continuity}
 \subsection*{Definition of limits} 
 Let $f$ be a function of two variables whose domain $D$ includes points arbitrarily close to $(a, b)$. 
 
@@ -47,8 +51,10 @@ We say $f$ is \textbf{continuous on} $D$ if $f$ is continuous at every point $(a
 
 \newpage
 
-\section*{14.3 Partial Derivatives}
-
-	
+\section{Partial Derivatives}
+\subsection*{Partial Derivatives}
+\begin{equation}
+	f_x (a, b) = g'(a) \quad \text{where} \quad g{x} = f(x, b)
+\end{equation}	
 
 \end{document}
