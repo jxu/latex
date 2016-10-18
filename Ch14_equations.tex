@@ -276,6 +276,40 @@ To find the absolute maximum and minimum values of $f$ on $D$: \\
 
 3. The largest of the values from steps 1 and 2 is the absolute maximum, the smallest is the absolute minimum. 
 
+\newpage 
+
+\section{Lagrange Multipliers}
+Geometrically, the maximum or minimum of $f(x, y)$ subject to $g(x, y) = k$ is when the two curves touch, that is when they have a common tangent line. 
+
+\begin{equation}
+	\nabla f (x_0, y_0, z_0) = \lambda \ \nabla g (x_0, y_0, z_0)
+\end{equation}
+Lambda is called a \textbf{Lagrange multiplier}. 
+
+In component form, 
+\begin{equation}
+	f_x = \lambda g_x \qquad
+	f_y = \lambda g_y \qquad
+	f_z = \lambda g_z \qquad
+	g(x, y, z) = k
+\end{equation}
+This is a system of four equations and four unknowns. For functions of two variables, a similar equation holds. 
+
+\subsection*{Two Constraints}
+For $f(x, y, z)$ subject to two constraints $g(x, y, z) = k$ and $h(x, y, z) = c$,
+\begin{equation}
+	\nabla f (x_0, y_0, z_0) = \lambda \ \nabla g (x_0, y_0, z_0) + \mu \ \nabla h (x_0, y_0, z_0)
+\end{equation}
+In component form, 
+\begin{equation}
+\begin{aligned}
+	&f_x = \lambda g_x + \mu h_x \\
+	&f_y = \lambda g_y + \mu h_y \\
+	&f_z = \lambda g_z + \mu h_z \\
+	&g(x, y, z) = k \\
+	&h(x, y, z) = c
+\end{aligned}
+\end{equation}
 
 
 \end{document}
