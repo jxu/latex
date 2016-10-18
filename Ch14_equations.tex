@@ -1,4 +1,4 @@
-% Basic formatting
+% Never doing this again...probably
 
 \documentclass{report}  % For chapter number
 \usepackage{amsmath, chngcntr}
@@ -131,5 +131,44 @@ But if a function is differentiable at a point, then \textit{all} directional de
 
 \subsection*{Three or More Variables}
 Defined similarly.
+
+\newpage
+
+\section{The Chain Rule}
+\paragraph{Chain Rule Case 1} Suppose $z = f(x, y), \ x = g(t), \ y = h(t)$, and all are differentiable. Then
+
+\begin{equation}
+	\frac{dz}{dt} = \frac{\partial z}{\partial x} \frac{dx}{dt} + \frac{\partial z}{\partial y} \frac{dy}{dt}
+\end{equation}
+
+\paragraph{Chain Rule Case 2} Suppose $z = f(x, y), \ x = g(s, t), \ y = h(s, t)$, and all are differentiable. Then
+
+\begin{equation}
+	\frac{dz}{ds} = \frac{\partial z}{\partial x} \frac{\partial x}{ \partial s} + \frac{\partial z}{\partial y} \frac{\partial y}{\partial s}
+	\qquad \quad
+	\frac{dz}{dt} = \frac{\partial z}{\partial x} \frac{\partial x}{ \partial t} + \frac{\partial z}{\partial y} \frac{\partial y}{\partial t}
+\end{equation}
+\\
+
+A tree diagram can help remember the Chain Rule (supposedly). 
+
+\subsection*{Implicit Differentiation}
+Writing $F(x, y) = 0$ which defines $y$ implicitly in terms of $x$, that is $y = f(x)$ so $F(x, f(x)) = 0$, then 
+
+\begin{equation}
+	% Extra slashes in numerator to make center fraction line longer
+	\frac{dy}{dx} = - \displaystyle \frac{\displaystyle  \ \frac{\partial F}{\partial x } \ }{\displaystyle \frac{\partial F}{\partial y}}
+	= - \frac{F_x}{F_y}
+\end{equation} \\
+
+For $z$ given implicitly as $z = f(x, y)$ by $F(x, y, z) = 0$, that is $F(x, y, f(x, y)) = 0$, we get similar formulas: 
+
+\begin{equation}
+	\frac{\partial z}{\partial x} = - \frac{F_x}{F_z}
+	\qquad \quad
+	\frac{\partial z}{\partial y} = - \frac{F_y}{F_z}
+\end{equation}
+
+Note in both cases the fraction appears inverted, but that is a consequence of solving for the implicit derivative(s). 
 
 \end{document}
