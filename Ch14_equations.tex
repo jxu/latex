@@ -135,6 +135,7 @@ Defined similarly.
 \newpage
 
 \section{The Chain Rule}
+\subsection*{Chain Rule for Functions of Two Variables}
 \paragraph{Chain Rule Case 1} Suppose $z = f(x, y), \ x = g(t), \ y = h(t)$, and all are differentiable. Then
 
 \begin{equation}
@@ -169,6 +170,70 @@ For $z$ given implicitly as $z = f(x, y)$ by $F(x, y, z) = 0$, that is $F(x, y, 
 	\frac{\partial z}{\partial y} = - \frac{F_y}{F_z}
 \end{equation}
 
-Note in both cases the fraction appears inverted, but that is a consequence of solving for the implicit derivative(s). 
+Note in both cases the fraction appears inverted, but that is a consequence of solving for the implicit derivative(s).
 
+\newpage
+
+\section{Directional Derivatives and the Gradient Vector}
+\subsection*{Directional Derivatives}
+
+For differentiable $f$, $f$ has a directional derivative in the direction of the unit vector $\vec{u} = \langle a, b \rangle$ and 
+\begin{equation}
+	D_{\vec{u}} f(x, y) = f_x (x, y)a + f_y (x, y)b
+\end{equation}
+
+If $\vec{u}$ makes angle $\theta$ with the positive x-axis, we can write $\vec{u} = \langle \cos \theta , \sin \theta \rangle$.
+
+\paragraph{The Gradient Vector}
+Since $D_u f(x, y) = \langle f_x (x, y), f_y (x, y) \rangle \cdot \langle a, b \rangle$,
+we give the first vector a special name, \textbf{grad} $f$ or $\nabla f$ ("del" or "nabla"). 
+
+\begin{equation}
+	\nabla f(x, y) = \langle f_x (x, y), f_y (x, y) \rangle
+\end{equation}
+
+\begin{equation}
+	D_u f(x, y) = \nabla f(x, y) \cdot \vec{u}
+\end{equation}
+
+\subsection*{Functions of Three Variables}
+Defined similarly. 
+
+\begin{equation}
+	\nabla f= \langle f_x , f_y , f_z \rangle
+\end{equation}
+
+\begin{equation}
+	D_u f(x, y, z) = \nabla f(x, y, z) \cdot \vec{u}
+\end{equation}
+
+\subsection*{Maximizing the Directional Derivatives}
+Suppose $f$ is differentiable. 
+\begin{equation}
+	\max(D_u f(\vec{x})) = |\nabla f(\vec{x})|
+\end{equation}
+This occurs when $\vec{u}$ has the same direction as $\nabla f(\vec{x})$, or in my own notation
+
+\begin{equation}
+	\vec{u} = k \nabla f(\vec{x})
+\end{equation}
+Normalize $\nabla f(\vec{x})$ to get $\vec{u}$. 
+
+\subsection*{Tangent Planes to Level Surfaces}
+If $\nabla F(x_0, y_0, z_0) \ne 0$, define the \textbf{tangent plane to the level surface} $F(x, y, z) = k$ at $P(x_0, y_0, z_0)$ as the plane that passes through $P$ and has normal vector $\nabla F(x_0, y_0, z_0)$. 
+
+Using the standard equation of a plane, we can write 
+\begin{equation}
+	F_x (x_0, y_0, z_0) (x-x_0) + 
+	F_y (x_0, y_0, z_0) (y-y_0) + 
+	F_z (x_0, y_0, z_0) (z-z_0) = 0
+\end{equation} \\
+
+The \textbf{normal line} is perpendicular to the tangent plane and given by 
+$\nabla F(x_0, y_0, z_0)$. It has symmetric equations
+\begin{equation}
+	\frac{x-x_0}{F_x (x_0, y_0, z_0)} = 
+	\frac{y-y_0}{F_y (x_0, y_0, z_0)} = 
+	\frac{z-z_0}{F_z (x_0, y_0, z_0)}
+\end{equation}
 \end{document}
