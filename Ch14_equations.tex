@@ -236,4 +236,46 @@ $\nabla F(x_0, y_0, z_0)$. It has symmetric equations
 	\frac{y-y_0}{F_y (x_0, y_0, z_0)} = 
 	\frac{z-z_0}{F_z (x_0, y_0, z_0)}
 \end{equation}
+
+\newpage 
+
+\section{Maximum and Minimum Values}
+\subsection*{Local maximum and minimum}
+If $f$ has a local maximum or minimum at $(a, b)$ and the partial derivatives exist, then 
+\begin{equation}
+	f_x (a, b) = 0 \quad \text{and} \quad f_y (a, b) = 0
+\end{equation} 
+
+\paragraph{Critical Point} 
+More generally, a point $(a, b)$ is called a critical point if $f_x (a, b) = 0 \  \text{and} \  f_y (a, b) = 0$, 
+or if one of these partial derivatives does not exist. 
+
+\subsection*{2nd Derivative Test}
+If $f_x (a, b) = 0 \  \text{and} \  f_y (a, b) = 0$, let 
+\begin{equation}
+	D = D(a, b) = f_{xx}(a, b) f_{yy}(a, b) - (f_{xy}(a,b))^2
+\end{equation}
+(a) If $D > 0$ and $f_{xx}(a, b) > 0$, then $f(a, b)$ is a local minimum.
+
+(b) If $D > 0$ and $f_{xx}(a, b) < 0$, then $f(a, b)$ is a local maximum.
+
+(c) If $D < 0$, then $f(a, b)$ is a \textbf{saddle point} of $f$. 
+
+\subsection*{Absolute Maximum and Minimum Values}
+A \textbf{closed set} is one that contains all its boundary points. 
+
+\paragraph{Extreme Value Theorem} 
+There exists an absolute maximum and absolute minimum on a closed, bounded set $D$. 
+
+\paragraph{Closed Interval Method}
+To find the absolute maximum and minimum values of $f$ on $D$: \\
+
+1. Find the values of $f$ at the critical points of $f$ in $D$. 
+
+2. Find the extreme values of $f$ on the boundary of $D$.
+
+3. The largest of the values from steps 1 and 2 is the absolute maximum, the smallest is the absolute minimum. 
+
+
+
 \end{document}
