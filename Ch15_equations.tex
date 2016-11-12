@@ -47,7 +47,8 @@ Draw a picture!
 	\iint \limits_R f(x,y) \, dA = 
 	\int_\alpha^\beta \int_a^b f(r \cos{\theta}, r \cos{\theta}) r \, dr \, d\theta
 \end{equation}
-The "infinitesimal rectangle" $dA = dx \, dy = r \, dr \, d\theta$.
+The "infinitesimal rectangle" $dA = dx \, dy = r \, dr \, d\theta$. 
+\textbf{Don't forget the r!}
 
 \section{Applications of Double Integrals}
 Omitted. 
@@ -64,5 +65,48 @@ Note the similarity to the arc length formula.
 There are different types of regions as well, defined between two functions. 
 Make sure the functions are in the inner integrals.
 
+\section{Triple Integrals in Cylindrical Coordinates}
+\paragraph{Cylindrical Coordinates} Points are given as $(r, \theta, z)$. 
+$r$ and $\theta$ are the polar coordinates and $z$ is the height. 
+
+\begin{equation}
+	x = r \cos{\theta} \qquad y = r\sin{\theta} \qquad z = z
+\end{equation}
+\begin{equation}
+	r^2 = x^2 + y^2 \qquad \tan{\theta} = \frac{y}{x}
+\end{equation}
+\begin{equation}
+	\iiint \limits_E f(x, y, z) \, dV = \int_{\theta_1}^{\theta_2} \! \int_{f_1}^{f_2} \! \int_{z_1}^{z_2}
+	f(r \cos{\theta}, r\sin{\theta}, z) \, r \, dz \, dr \, d\theta
+\end{equation}
+
+\section{Triple Integrals in Spherical Coordinates}
+\paragraph{Spherical Coordinates} Points are given as $(\rho, \theta, \phi)$. 
+$\rho$ is the distance from the point to the origin, 
+$\theta$ is the same angle as in polar coordinates (xy-plane), and
+$\phi$ is the angle between the positive z-axis and the line segment to the point. \\ \\
+Note $$\rho \ge 0 \qquad \text{and} \qquad 0 \le \phi \le \pi$$
+
+A sphere is given as $\rho = r$ and a cone is given as $\phi = c$. 
+
+\subsection*{Conversion}
+\begin{equation}
+	x = \rho \, \sin{\phi} \, \cos{\theta} \qquad
+	y = \rho \, \sin{\phi} \, \sin{\theta} \qquad
+	z = \rho \, \cos{\phi} 
+\end{equation}
+Remember since $\theta$ corresponds to polar coordinates, so $x$ and $y$ are just multiplied by $\rho \, \sin{\phi}$. 
+See diagram in textbook.
+
+\begin{equation}
+	\rho^2 = x^2 + y^2 + z^2
+\end{equation}
+For $f(x, y, z) = g(\rho, \theta, \phi)$,
+\begin{equation}
+	\iiint \limits_E f(x, y, z) \, dV = 
+	\int_{\phi_1}^{\phi_2} \! \int_{\theta_1}^{\theta_2} \! \int_{\rho_1}^{\rho_2} 
+	g(\rho, \theta, \phi) \, \rho^2 \sin{\phi} \, d\rho \, d\theta \, d\phi
+\end{equation}
+Where $dV = \rho^2 \sin{\phi} \, d\rho \, d\theta \, d\phi$.
 
 \end{document}
