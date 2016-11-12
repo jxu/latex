@@ -1,0 +1,40 @@
+% Pray I don't screw this test up again
+
+\documentclass{report}  % For chapter number
+\usepackage{amsmath, chngcntr}
+
+\counterwithin{equation}{section}  % Reset equation counter every section
+\counterwithout{equation}{chapter} 
+\setlength\parindent{0pt}  % No indent
+
+\begin{document}
+\setcounter{chapter}{15}
+\section{Double Integrals Over Rectangles}
+\subsection*{Iterated Integrals}
+\paragraph{Fubini's Theorem} 
+allows us to switch the order of integration. For $a \le x \le b, c \le y \le d$,
+\begin{equation}
+	\iint \limits_R f(x,y) \, dA = 
+	\int_a^b \int_c^d f(x,y) \, dy \, dx =
+	\int_c^d \int_c^d f(x,y) \, dx \, dy
+\end{equation}
+
+\section{Double Integrals Over General Regions}
+\subsection*{Integrals Between Curves}
+\paragraph{Type I} Region lies between two functions of $x$, that is 
+$$a \le x \le b, \qquad g_1(x) \le y \le g_2(x)$$
+
+\paragraph{Type II} Region lies between two functions of $y$, that is 
+$$c \le y \le d, \qquad h_1(x) \le x \le h_2(x)$$
+
+To solve these, make sure the function bounds are in the inner integral. 
+See textbook for images.
+
+\subsection*{Switching Order of Integration}
+Integrals can be switched as long as the region is the same. 
+For example, the region defined by $$0 \le x \le 4, \sqrt{x} \le y \le 2$$ is the same region as $$0 \le y \le 2, 0 \le x \le y^2$$
+
+Draw a picture!
+
+
+\end{document}
