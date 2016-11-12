@@ -30,11 +30,39 @@ $$c \le y \le d, \qquad h_1(x) \le x \le h_2(x)$$
 To solve these, make sure the function bounds are in the inner integral. 
 See textbook for images.
 
+Area is defined as $\iint 1 \, dA$.
+
 \subsection*{Switching Order of Integration}
 Integrals can be switched as long as the region is the same. 
 For example, the region defined by $$0 \le x \le 4, \sqrt{x} \le y \le 2$$ is the same region as $$0 \le y \le 2, 0 \le x \le y^2$$
 
 Draw a picture!
+
+\section{Double Integrals in Polar Coordinates}
+\begin{equation}
+	r^2 = x^2 + y^2 \qquad x = r \cos{\theta} \qquad y = r \cos{\theta}
+\end{equation}
+
+\begin{equation}
+	\iint \limits_R f(x,y) \, dA = 
+	\int_\alpha^\beta \int_a^b f(r \cos{\theta}, r \cos{\theta}) r \, dr \, d\theta
+\end{equation}
+The "infinitesimal rectangle" $dA = dx \, dy = r \, dr \, d\theta$.
+
+\section{Applications of Double Integrals}
+Omitted. 
+
+\section{Surface Area}
+\begin{equation}
+	A = \iint \limits_D \sqrt{f_x(x,y)^2 + f_y(x,y)^2 + 1} \, dA 
+\end{equation}
+Note the similarity to the arc length formula.
+
+\section{Triple Integrals}
+\subsection*{Iterated Integrals}
+\paragraph{Fubini's Theorem} Allows us to switch the order of integration. 
+There are different types of regions as well, defined between two functions. 
+Make sure the functions are in the inner integrals.
 
 
 \end{document}
