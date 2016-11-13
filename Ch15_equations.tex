@@ -109,4 +109,30 @@ For $f(x, y, z) = g(\rho, \theta, \phi)$,
 \end{equation}
 Where $dV = \rho^2 \sin{\phi} \, d\rho \, d\theta \, d\phi$.
 
+\section{Change of Variables in Multiple Integrals}
+\subsection*{Boundaries}
+To change coordinates, we consider the transformation $T$ from the uv-plane region $S$ to the xy-plane $R$:
+$$T(u,v) = (x,y)$$
+The inverse transformation $T^{-1}$ converts $(x, y) \to (u, v)$. 
+
+\subsection*{The Jacobian}
+To actually calculate the integral, we have to convert $dA = \mathbf{J} \, du \, dv$,
+where the \textbf{Jacobian} is defined as
+
+\begin{equation}
+	\frac{\partial (x,y)}{\partial (u,v)} = 
+	\begin{vmatrix}
+		\dfrac{\partial x}{\partial u}& \dfrac{\partial x}{\partial v}\\[1em]
+		\dfrac{\partial y}{\partial u}& \dfrac{\partial y}{\partial v}\\
+	\end{vmatrix}
+	= \frac{\partial x}{\partial u} \frac{\partial y}{\partial v} - 
+	  \frac{\partial x}{\partial v} \frac{\partial y}{\partial u}
+\end{equation}
+
+To integrate a region $S$ in the uv-plane from a region $R$ in the xy-plane, 
+\begin{equation}
+	\iint \limits_R f(x,y) \, dA = \iint \limits_S f(x(u,v), y(u,v)) \,
+	\mathbf{J} \, du \, dv
+\end{equation}
+
 \end{document}
