@@ -1,11 +1,14 @@
 % Common math commands to save typing
 \usepackage{amssymb}
 \usepackage{mathtools}
-\usepackage{physics}  % \abs and \norm 
-% if not available, use
-%\DeclarePairedDelimiter\abs{\lvert}{\rvert}
-%\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\IfFileExists{physics.sty} {
+  \usepackage{physics}
+} { % fallback definitions
+  \DeclarePairedDelimiter\abs{\lvert}{\rvert}          
+  \DeclarePairedDelimiter\norm{\lVert}{\rVert}
+}
 
+% Common symbols and operators
 \newcommand{\R}{\mathbb R}
 \newcommand{\N}{\mathbb N}
 \newcommand{\C}{\mathbb C}
